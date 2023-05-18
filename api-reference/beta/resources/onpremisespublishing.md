@@ -31,6 +31,7 @@ For a tutorial about configuring Application Proxy, see [Automate the configurat
 |externalAuthenticationType|externalAuthenticationType| Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Passthru does not require authentication. Possible values are: `passthru`, `aadPreAuthentication`. |
 |externalUrl|String| The published external url for the application. For example, https://intranet-contoso.msappproxy.net/.  |
 |internalUrl|String| The internal url of the application. For example, https://intranet/. |
+|isAccessibleViaZTNAClient|Boolean| Indicates whether the application is accessible via the Microsoft Network Access Client on a managed device |
 |isBackendCertificateValidationEnabled|Boolean| Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property will be set to `true` by default. For all existing apps, the property will be set to `false`. |
 |isHttpOnlyCookieEnabled|Boolean| Indicates if the HTTPOnly cookie flag should be set in the HTTP response headers. Set this value to `true` to have Application Proxy cookies include the HTTPOnly flag in the HTTP response headers. If using Remote Desktop Services, set this value to False. Default value is `false`. |
 |isOnPremPublishingEnabled|Boolean| Indicates if the application is currently being published via Application Proxy or not. This is pre-set by the system. Read-only. |
@@ -66,6 +67,7 @@ Here is a JSON representation of the resource.
   "externalAuthenticationType": "String",
   "externalUrl": "String",
   "internalUrl": "String",
+  "isAccessibleViaZTNAClient": true,
   "isBackendCertificationValidationEnabled": true,
   "isHttpOnlyCookieEnabled": true,
   "isOnPremPublishingEnabled": true,
@@ -86,13 +88,4 @@ Here is a JSON representation of the resource.
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2019-02-04 14:57:30 UTC -->
-<!--
-{
-  "type": "#page.annotation",
-  "description": "onPremisesPublishing resource",
-  "keywords": "",
-  "section": "documentation",
-  "tocPath": "",
-  "suppressions": []
-}
--->
+
